@@ -17,7 +17,7 @@ EcoLens is currently deployed at:
 
 Demo video:
 
-- `https://youtu.be/s3EjDCPtkrY`
+- `https://youtu.be/1PsseKiJJf4`
 
 ## Submission Snapshot
 

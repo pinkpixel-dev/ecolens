@@ -23,6 +23,8 @@
   "author": "Pink Pixel",
   "license": "Apache-2.0",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1019.0",
+    "@aws-sdk/lib-storage": "^3.1019.0",
     "@google/genai": "^1.31.0",
     "@opennextjs/cloudflare": "^1.18.0",
     "next": "^16.0.1",
