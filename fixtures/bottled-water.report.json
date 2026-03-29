@@ -1,0 +1,159 @@
+{
+  "report": {
+    "product": {
+      "name": "Bottled Water",
+      "brand": null,
+      "category": "Beverage"
+    },
+    "summary": "Bottled water, particularly in single-use plastic, presents significant sustainability challenges primarily related to plastic waste, resource consumption, and carbon emissions from production and transportation. While offering convenience, its environmental footprint is considerably higher than tap water, contributing to pollution and climate change. Its widespread consumption undermines principles of responsible consumption and production.",
+    "overallScore": 25,
+    "sdgAlignment": {
+      "primary": "SDG 12: Responsible Consumption and Production",
+      "secondary": [
+        "SDG 13: Climate Action",
+        "SDG 15: Life on Land",
+        "SDG 6: Clean Water and Sanitation",
+        "SDG 8: Decent Work and Economic Growth"
+      ],
+      "whyItMatters": "The production, transportation, and disposal of bottled water contribute to excessive resource depletion and pollution, particularly plastic waste. This directly challenges the principles of responsible consumption and production (SDG 12), with single-use plastics being a major concern for waste reduction (Target 12.5). The energy required for manufacturing PET bottles and transporting water results in significant greenhouse gas emissions, exacerbating climate change (SDG 13). Furthermore, widespread plastic pollution from discarded bottles harms terrestrial and aquatic ecosystems, endangering wildlife and impacting biodiversity (SDG 15). In some regions, large-scale water extraction for bottling can strain local water resources and potentially undermine public trust in tap water systems (SDG 6). Ethical sourcing considerations for plastic production and bottling plant labor are relevant to SDG 8."
+    },
+    "environmentalImpact": {
+      "carbonFootprintEstimate": "Estimated to be significantly higher than tap water, ranging from approximately 150g to 300g CO2e per liter, primarily from PET plastic production, bottling processes, and transportation. This is roughly 300 to 1000 times higher than tap water.",
+      "landWaterBiodiversityNotes": [
+        "Single-use plastic bottles contribute substantially to land and marine pollution, breaking down into microplastics that enter food chains and ecosystems, impacting biodiversity.",
+        "The production of PET plastic requires fossil fuels (oil and natural gas) and significant energy, contributing to resource depletion.",
+        "Water extraction for bottling can, in some cases, put pressure on local water tables and ecosystems, although this impact varies widely by source and region.",
+        "Dispersed plastic waste poses direct harm to wildlife through entanglement and ingestion."
+      ],
+      "scorecard": [
+        {
+          "label": "Material Production (PET)",
+          "score": 10,
+          "summary": "High energy input and reliance on non-renewable fossil fuels for Polyethylene terephthalate (PET) manufacturing."
+        },
+        {
+          "label": "Manufacturing & Filling",
+          "score": 30,
+          "summary": "Processes require energy and water, contributing to the overall footprint, though generally less impactful than material production."
+        },
+        {
+          "label": "Transportation",
+          "score": 20,
+          "summary": "Transporting heavy bottled water over potentially long distances, often across continents, contributes significantly to carbon emissions."
+        },
+        {
+          "label": "End-of-Life & Waste",
+          "score": 5,
+          "summary": "Despite technical recyclability, a vast majority of single-use plastic bottles globally end up in landfills, incinerators, or as environmental litter due to low collection and recycling rates, and inadequate infrastructure."
+        }
+      ]
+    },
+    "ethicalSourcing": {
+      "laborRisk": "Moderate. Potential labor risks are associated with petrochemical industries for plastic production and with bottling plant operations, including concerns around wages, working conditions, and safety, especially in regions with lax labor regulations. Specific risks vary by brand and supply chain.",
+      "sourcingNotes": [
+        "Water rights and potential local community impact from large-scale water extraction for bottling can be contentious in some areas.",
+        "Lack of transparency in the full supply chain for plastic resin can obscure labor practices and environmental compliance."
+      ],
+      "score": 40
+    },
+    "packaging": {
+      "packagingType": "Single-use Plastic Bottle (Polyethylene terephthalate - PET)",
+      "recyclability": "Technically recyclable in many regions, but actual global recycling rates for PET bottles are often low (estimates vary, but generally below 20-30% for bottles, much lower for all plastics). Contamination and inadequate infrastructure limit effective recycling.",
+      "notes": [
+        "Designed for single-use, leading to a high volume of waste that often becomes litter or ends up in landfills.",
+        "Lightweighting efforts have reduced material use per bottle but do not address the fundamental issue of single-use plastic waste.",
+        "Plastic bottles degrade into microplastics over time, posing long-term environmental and potential health risks."
+      ],
+      "score": 15
+    },
+    "redFlags": [
+      "Significant contribution to plastic waste and environmental pollution (land, freshwater, oceans).",
+      "High carbon footprint compared to tap water due to energy-intensive production and transport.",
+      "Often marketed as superior to tap water, potentially undermining public confidence in and investment in municipal water systems.",
+      "Consumption of non-renewable fossil resources for plastic production.",
+      "Potential for microplastic ingestion from plastic bottles."
+    ],
+    "certifications": {
+      "likelyHelpful": [
+        "Alliance for Water Stewardship (AWS) Standard (for responsible water management, less common for generic bottled water).",
+        "Cradle to Cradle Certified (for material health and recyclability, though rare for single-use plastic bottles).",
+        "B Corp Certification (for overall corporate social and environmental performance, if from a specific brand/company)."
+      ],
+      "mentionedOrLikelyPresent": [
+        "Given the generic nature of 'Bottled Water' and lack of specific brand information, no specific certifications are universally mentioned or likely present."
+      ]
+    },
+    "alternatives": [
+      {
+        "name": "Filtered Tap Water",
+        "reason": "Significantly lower environmental impact, eliminates plastic waste, and is highly cost-effective. Modern tap water systems are rigorously tested and safe in many regions.",
+        "betterFor": [
+          "Environmental impact (carbon footprint, plastic waste)",
+          "Cost savings",
+          "Resource efficiency",
+          "Public health infrastructure"
+        ]
+      },
+      {
+        "name": "Reusable Water Bottle (filled with tap water)",
+        "reason": "When combined with tap water, a durable, reusable bottle drastically reduces single-use plastic consumption over its lifespan, leading to minimal environmental impact per use.",
+        "betterFor": [
+          "Plastic waste reduction",
+          "Long-term environmental impact",
+          "Convenience for on-the-go hydration without waste"
+        ]
+      },
+      {
+        "name": "Water Dispenser/Cooler with Refillable Jugs",
+        "reason": "For office or home settings, this option reduces individual plastic bottle use by providing water in bulk, though it still involves plastic (larger jugs) and transportation. It's a step up from single-serve bottles.",
+        "betterFor": [
+          "Plastic waste reduction (compared to individual bottles)",
+          "Convenience for group settings",
+          "Reduced frequency of purchases"
+        ]
+      }
+    ],
+    "consumerTips": [
+      "Prioritize tap water whenever available and safe to drink. Consider using an affordable home water filter (pitcher, faucet, or whole-house) for taste or additional purification.",
+      "Invest in a durable, reusable water bottle made from materials like stainless steel or glass, and carry it with you to refill throughout the day.",
+      "Actively seek out and support initiatives that aim to improve local tap water infrastructure and increase the availability of public drinking fountains.",
+      "If bottled water is absolutely necessary (e.g., during emergencies or in areas without safe tap water), opt for larger containers for refilling, or look for brands that explicitly use a high percentage of recycled content or alternative, more sustainable packaging where available."
+    ],
+    "assumptions": [
+      "The identified product 'Bottled Water' refers to generic, single-serve drinking water typically packaged in a Polyethylene terephthalate (PET) plastic bottle.",
+      "The water source is generic and not from a specifically protected or exploited region (as no brand or specific origin is provided).",
+      "General industry practices for bottled water production, transportation, and disposal are considered for the environmental and ethical impact assessment."
+    ],
+    "confidence": {
+      "score": 0.9,
+      "explanation": "High confidence in the general sustainability profile of generic single-use plastic bottled water due to well-documented environmental issues associated with plastic production, waste, and transport. The lack of specific brand details means analysis is based on industry averages and common practices for this product category, which are broadly consistent across the industry."
+    },
+    "sources": [
+      {
+        "label": "Industry Data on PET Production",
+        "kind": "dataset",
+        "note": "Information on energy consumption, fossil fuel reliance, and greenhouse gas emissions associated with Polyethylene terephthalate (PET) manufacturing."
+      },
+      {
+        "label": "Plastic Waste and Recycling Statistics",
+        "kind": "dataset",
+        "note": "Global and regional data on plastic production volumes, recycling rates, and environmental leakage of plastic waste."
+      },
+      {
+        "label": "Life Cycle Assessments (LCAs) of Bottled vs. Tap Water",
+        "kind": "model-estimate",
+        "note": "Peer-reviewed studies and analyses comparing the environmental footprints (e.g., carbon emissions, water use, waste generation) of bottled water against municipal tap water."
+      },
+      {
+        "label": "General Knowledge of Plastic Pollution Impacts",
+        "kind": "general-knowledge",
+        "note": "Common understanding and scientific consensus regarding the environmental and ecological effects of plastic pollution, microplastics, and their impact on terrestrial and aquatic ecosystems and wildlife."
+      },
+      {
+        "label": "UN Sustainable Development Goals (SDGs) Framework",
+        "kind": "general-knowledge",
+        "note": "Understanding of the objectives, targets, and interconnections of SDGs 12, 13, 15, 6, and 8, which form the basis for alignment assessment."
+      }
+    ]
+  }
+}

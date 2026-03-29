@@ -1,0 +1,19 @@
+{
+  "product": {
+    "name": "Cotton T-shirt",
+    "brand": "Generic Fast Fashion Brand",
+    "category": "Apparel",
+    "description": "A basic short-sleeved t-shirt made from cotton, characteristic of fast fashion production.",
+    "materialsOrIngredients": [
+      "Cotton"
+    ],
+    "packagingType": "Plastic bag",
+    "likelyUseCase": "Everyday wear",
+    "confidence": 0.9,
+    "identificationNotes": [
+      "Identification based solely on user-provided hint 'Fast fashion cotton t-shirt'.",
+      "Assumed a generic brand as specific brand information was not provided.",
+      "Assumed common retail packaging for a single garment, such as a plastic bag."
+    ]
+  }
+}

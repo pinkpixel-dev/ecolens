@@ -1,0 +1,18 @@
+{
+  "product": {
+    "name": "Bottled Water",
+    "brand": null,
+    "category": "Beverage",
+    "description": "Drinking water contained in a single-serve plastic bottle.",
+    "materialsOrIngredients": [
+      "Water",
+      "Polyethylene terephthalate (PET)"
+    ],
+    "packagingType": "Plastic Bottle",
+    "likelyUseCase": "Hydration",
+    "confidence": 0.9,
+    "identificationNotes": [
+      "Identified based on user hint 'Plastic bottled water'. Specific brand, volume, and detailed composition are not provided and cannot be determined without further information."
+    ]
+  }
+}
