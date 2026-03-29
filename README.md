@@ -12,7 +12,19 @@ The goal is simple: give people better information at the moment of purchase so 
 
 EcoLens is currently deployed at:
 
-- `https://ecolens.pinkpixel.dev`
+- App: `https://ecolens.pinkpixel.dev`
+- Repository: `https://github.com/pinkpixel-dev/ecolens`
+
+Demo video:
+
+- `https://youtu.be/s3EjDCPtkrY`
+
+## Submission Snapshot
+
+- Problem: Sustainability information is hard to access quickly while shopping.
+- Solution: EcoLens turns a product name or image into a clear AI-generated sustainability report.
+- Audience: Everyday consumers who want practical guidance, not long research documents.
+- Core value: Fast, understandable decision support tied to responsible consumption.
 
 ## Screenshots
 
@@ -71,7 +83,7 @@ EcoLens currently supports the full core demo loop:
 
 ## Current Project Status
 
-As of `2026-03-27`, the repository includes:
+The current build includes:
 
 - Next.js App Router application
 - TypeScript across frontend and backend
@@ -80,7 +92,7 @@ As of `2026-03-27`, the repository includes:
 - `POST /api/identify`, `POST /api/analyze`, and `POST /api/chat` routes
 - A polished single-page demo flow for generating and exploring reports
 - Fixture data for reliable demo examples
-- Passing local lint, typecheck, and production build noted in the roadmap
+- Local lint, typecheck, and production build support
 
 ## Product Experience
 
@@ -281,19 +293,7 @@ The app includes demo-friendly product examples:
 - Fast fashion cotton t-shirt
 - Chocolate snack bar
 
-The repository also includes fixtures for these examples so the team can reference stable outputs while preparing the demo and technical report.
-
-## Recommended Demo Flow
-
-For a short hackathon presentation, the clearest flow is:
-
-1. Start on the homepage and explain the problem.
-2. Enter or select a familiar everyday product.
-3. Generate the Eco Report.
-4. Highlight the overall score, red flags, and alternatives.
-5. Show how the app links the result to SDG 12.
-6. Ask one follow-up question in chat.
-7. Show the correction flow if you want to demonstrate resilience.
+The repository also includes fixtures for these examples so the demo remains stable and repeatable.
 
 ## Limitations
 
@@ -307,31 +307,12 @@ Current limitations include:
 - carbon and sourcing assessments are directional rather than compliance-grade
 - coverage is stronger for common consumer goods than niche or obscure products
 
-These tradeoffs are acceptable for a hackathon MVP because the focus is fast consumer education, interactive usability, and a clear demonstration of AI-assisted decision support.
+These tradeoffs are reasonable for an MVP focused on fast consumer education, interactive usability, and a clear demonstration of AI-assisted decision support.
 
-## Documentation
+## Roadmap
 
-- [PLAN.md](./PLAN.md): original hackathon brief and concept notes
-- [ROADMAP.md](./ROADMAP.md): build status and next steps
-- [OVERVIEW.md](./OVERVIEW.md): architecture and product direction
-- [CHANGELOG.md](./CHANGELOG.md): milestone history
-- `fixtures/`: sample identification and report outputs for demo prep
-
-## Submission Notes
-
-If you are packaging this project for judges or reviewers, make sure the final submission includes:
-
-- hosted app URL
-- 2-minute demo video link
-- team/member names
-- screenshots of the report UI
-- technical report
-- references for frameworks, models, and datasets used
-
-## Next Steps
-
-High-value next improvements for the project include:
+Next improvements for the project include:
 
 - stronger loading, empty, and error states
-- additional screenshots and diagrams for the technical report
 - broader sustainability data retrieval for better grounding
+- shareable eco-score so users can post their results on social media
