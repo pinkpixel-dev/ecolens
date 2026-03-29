@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useTransition } from "react";
+import { useRef, useState, useTransition } from "react";
 
 import type { ChatMessage } from "@/lib/schemas/chat";
 import type { IdentifiedProduct } from "@/lib/schemas/product";
@@ -11,6 +11,12 @@ type RequestState = {
   product: IdentifiedProduct | null;
   report: EcoReport | null;
   error: string | null;
+};
+
+const initialRequestState: RequestState = {
+  product: null,
+  report: null,
+  error: null,
 };
 
 const demoProducts = [
@@ -64,21 +70,35 @@ function getImpactHeadline(report: EcoReport) {
 export function AppShell() {
   const [productName, setProductName] = useState("");
   const [imageFile, setImageFile] = useState<File | null>(null);
+  const [fileInputKey, setFileInputKey] = useState(0);
   const [correctionName, setCorrectionName] = useState("");
   const [isRegenerating, setIsRegenerating] = useState(false);
-  const [state, setState] = useState<RequestState>({
-    product: null,
-    report: null,
-    error: null,
-  });
+  const [state, setState] = useState<RequestState>(initialRequestState);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [chatInput, setChatInput] = useState("");
   const [chatInteractionId, setChatInteractionId] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
   const [isChatPending, startChatTransition] = useTransition();
+  const requestVersionRef = useRef(0);
+
+  function resetApp() {
+    requestVersionRef.current += 1;
+    setProductName("");
+    setImageFile(null);
+    setFileInputKey((current) => current + 1);
+    setCorrectionName("");
+    setIsRegenerating(false);
+    setState(initialRequestState);
+    setChatMessages([]);
+    setChatInput("");
+    setChatInteractionId(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   async function runAnalysis(selectedName?: string) {
     startTransition(async () => {
+      const requestVersion = ++requestVersionRef.current;
+
       try {
         setState((current) => ({ ...current, error: null }));
         setIsRegenerating(Boolean(state.report));
@@ -110,6 +130,10 @@ export function AppShell() {
           throw new Error(identifyData.error || "Failed to identify product.");
         }
 
+        if (requestVersion !== requestVersionRef.current) {
+          return;
+        }
+
         const analyzeResponse = await fetch("/api/analyze", {
           method: "POST",
           headers: {
@@ -122,6 +146,10 @@ export function AppShell() {
 
         if (!analyzeResponse.ok) {
           throw new Error(analyzeData.error || "Failed to analyze product.");
+        }
+
+        if (requestVersion !== requestVersionRef.current) {
+          return;
         }
 
         setState({
@@ -141,6 +169,10 @@ export function AppShell() {
         setChatInput("");
         setIsRegenerating(false);
       } catch (error) {
+        if (requestVersion !== requestVersionRef.current) {
+          return;
+        }
+
         setState((current) => ({
           product: current.product,
           report: current.report,
@@ -171,6 +203,8 @@ export function AppShell() {
     setChatMessages((current) => [...current, userMessage]);
 
     startChatTransition(async () => {
+      const requestVersion = requestVersionRef.current;
+
       try {
         const response = await fetch("/api/chat", {
           method: "POST",
@@ -190,6 +224,10 @@ export function AppShell() {
           throw new Error(data.error || "Failed to send chat message.");
         }
 
+        if (requestVersion !== requestVersionRef.current) {
+          return;
+        }
+
         setChatMessages((current) => [
           ...current,
           {
@@ -199,6 +237,10 @@ export function AppShell() {
         ]);
         setChatInteractionId(data.interactionId || null);
       } catch (error) {
+        if (requestVersion !== requestVersionRef.current) {
+          return;
+        }
+
         setChatMessages((current) => [
           ...current,
           {
@@ -220,19 +262,26 @@ export function AppShell() {
     <main className="page-shell">
       <section className="hero-panel">
         <div className="hero-copy">
-          <div className="hero-brand">
-            <div className="hero-logo-wrap">
-              <Image
-                src="/logo.png"
-                alt="EcoLens logo"
-                className="hero-logo"
-                width={120}
-                height={120}
-                priority
-              />
+          <button
+            aria-label="Return to homepage"
+            className="hero-brand-button"
+            onClick={resetApp}
+            type="button"
+          >
+            <div className="hero-brand">
+              <div className="hero-logo-wrap">
+                <Image
+                  src="/logo.png"
+                  alt="EcoLens logo"
+                  className="hero-logo"
+                  width={120}
+                  height={120}
+                  priority
+                />
+              </div>
+              <p className="eyebrow">EcoLens</p>
             </div>
-            <p className="eyebrow">EcoLens</p>
-          </div>
+          </button>
           <h1>Scan what you buy. See what it costs the planet.</h1>
           <p className="lede">
             EcoLens identifies everyday products and turns them into a clear sustainability report
@@ -258,6 +307,7 @@ export function AppShell() {
           <label className="field">
             <span>Product image</span>
             <input
+              key={fileInputKey}
               type="file"
               accept="image/*"
               onChange={(event) => setImageFile(event.target.files?.[0] ?? null)}

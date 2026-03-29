@@ -123,11 +123,27 @@ input,
   padding: 24px 8px 24px 0;
 }
 
+.hero-brand-button {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.hero-brand-button:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 10px;
+  border-radius: 32px;
+}
+
 .hero-brand {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 18px;
 }
 
 .hero-logo-wrap {
