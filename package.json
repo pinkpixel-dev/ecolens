@@ -27,7 +27,7 @@
     "@aws-sdk/lib-storage": "^3.1019.0",
     "@google/genai": "^1.31.0",
     "@opennextjs/cloudflare": "^1.18.0",
-    "next": "^16.0.1",
+    "next": "^16.2.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "zod": "^4.1.12"
